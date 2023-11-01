@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import About from "../pages/About";
 import Services from "../pages/Services";
-import Cars from "../pages/cars";
+import Cars from "../pages/Cars";
 import Airplanes from "../pages/Airplanes";
 import Boats from "../pages/Boats";
 import Contact from "../pages/Contact";
