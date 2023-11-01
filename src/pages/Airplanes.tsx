@@ -3,7 +3,9 @@ import Footer from "../components/Footer";
 import air1 from "../assets/rwandair.jpg";
 import air2 from '../assets/rwandair1.jpg'
 import air3 from "../assets/rwandair2.jpg";
- const transportData = [
+
+const Airplanes = () => {
+    const transportData = [
       {
         img: air1,
         text1:
@@ -26,8 +28,6 @@ import air3 from "../assets/rwandair2.jpg";
           "Safety on almost any terrain: the Amarok is the only pickup in its class to come with an Automatic Post-Collision Braking System, 17-inch disc brakes at the front and 16-inch disc brakes at the rear as standard. What’s more, the trailer stabilisation system provides the best possible protection against snaking trailers.",
       }
     ];
-const Airplanes = () => {
-   
   return (
     <div>
       <Header />
