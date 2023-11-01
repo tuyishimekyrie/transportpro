@@ -7,7 +7,6 @@ import Cars from "../pages/Cars";
 import Airplanes from "../pages/Airplanes";
 import Boats from "../pages/Boats";
 import Contact from "../pages/Contact";
-import Details from "../pages/Details";
 
 const router = createBrowserRouter([
   { path: "/", element: <HomePage /> },
@@ -15,7 +14,6 @@ const router = createBrowserRouter([
   { path: "/About", element: <About /> },
   { path: "/Services", element: <Services /> },
   { path: "/Cars", element: <Cars /> },
-  { path: "/details/:id", element: <Details /> },
   { path: "/Airplanes", element: <Airplanes /> },
   { path: "/Boats", element: <Boats /> },
   { path: "/Contact", element: <Contact /> },
