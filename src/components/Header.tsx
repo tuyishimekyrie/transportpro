@@ -1,5 +1,5 @@
 // import React from 'react'
-import { Link } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 import logo from '../assets/logo.jpg'
 
 const Header = () => {
@@ -10,25 +10,74 @@ const Header = () => {
       </div>
       <ul className="flex items-center gap-3">
         <li className="text-xl hover:text-sky-500">
-          <Link to="/HomePage">Home</Link>
+          <NavLink
+            to="/HomePage"
+            className={({ isActive }) =>
+              isActive ? "text-sky-500 font-bold border-b-2 border-sky-400" : ""
+            }
+          >
+            Home
+          </NavLink>
         </li>{" "}
         <li className="text-xl hover:text-sky-500">
-          <Link to="/About">About</Link>
+          <NavLink
+            to="/About"
+            className={({ isActive }) =>
+              isActive ? "text-sky-500 font-bold border-b-2 border-sky-400" : ""
+            }
+          >
+            About
+          </NavLink>
         </li>
         <li className="text-xl hover:text-sky-500">
-          <Link to="/Services">Services</Link>
+          <NavLink
+            to="/Services"
+            className={({ isActive }) =>
+              isActive ? "text-sky-500 font-bold border-b-2 border-sky-400" : ""
+            }
+          >
+            Services
+          </NavLink>
         </li>
-        <li className="text-xl hover:text-sky-500">
-          <Link to="/cars">Cars</Link>
+        <li className="text-xl hover:text-sky-500 ">
+          <NavLink
+            to="/cars"
+            className={({ isActive }) =>
+              isActive ? "text-sky-500 font-bold border-b-2 border-sky-400" : ""
+            }
+          >
+            Cars
+          </NavLink>
         </li>
-        <li className="text-xl hover:text-sky-500">
-          <a href="/Airplanes">Airplanes</a>
+        <li className="text-xl hover:text-sky-500 ">
+          <NavLink
+            to="/Airplanes"
+            className={({ isActive }) =>
+              isActive ? "text-sky-500 font-bold border-b-2 border-sky-400" : ""
+            }
+          >
+            Airplanes
+          </NavLink>
         </li>
-        <li className="text-xl hover:text-sky-500">
-          <a href="/Boats">Boats</a>
+        <li className="text-xl hover:text-sky-500 ">
+          <NavLink
+            to="/Boats"
+            className={({ isActive }) =>
+              isActive ? "text-sky-500 font-bold border-b-2 border-sky-400" : ""
+            }
+          >
+            Boats
+          </NavLink>
         </li>
-        <li className="text-xl hover:text-sky-500">
-          <a href="/Contact">Contact US</a>
+        <li className="text-xl hover:text-sky-500 ">
+          <NavLink
+            to="/Contact"
+            className={({ isActive }) =>
+              isActive ? "text-sky-500 font-bold border-b-2 border-sky-400" : ""
+            }
+          >
+            Contact US
+          </NavLink>
         </li>
       </ul>
     </div>

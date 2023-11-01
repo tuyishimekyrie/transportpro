@@ -7,9 +7,11 @@ import Cars from "../pages/Cars";
 import Airplanes from "../pages/Airplanes";
 import Boats from "../pages/Boats";
 import Contact from "../pages/Contact";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
-  { path: "/", element: <HomePage /> },
+  { path: "/", element: <HomePage /> 
+  ,errorElement:<ErrorPage />},
   { path: "/HomePage", element: <HomePage /> },
   { path: "/About", element: <About /> },
   { path: "/Services", element: <Services /> },

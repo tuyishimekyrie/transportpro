@@ -13,7 +13,7 @@ const Slider = () => {
     return (
       <div>
         <Marquee className="" pauseOnHover speed={120}>
-          <img src={plane} alt="road" className="w-60 h-60 object-cover px-2" />
+          <img src={plane} alt="road" className="w-60 h-60 object-cover px-2 " />
           <img src={Road1} alt="road" className="w-60 h-60 object-cover px-2" />
           <img src={Road2} alt="road" className="w-60 h-60 object-cover px-2" />
           <img src={Road4} alt="road" className="w-60 h-60 object-cover px-2" />
