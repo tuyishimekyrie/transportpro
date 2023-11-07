@@ -2,7 +2,10 @@ import polo from "../assets/polofront.jpg";
 import tiguan from "../assets/tiguan.png";
 import amarok from "../assets/Amarok.png";
 import toyota from "../assets/toyoya.jpg";
+import bus from "../assets/Bus.jpg";
 import taxi from "../assets/taxi.png";
+import teramont from "../assets/teramont.png";
+import passat from "../assets/Passat_1.png";
 // type prop = {
 //   img: string;
 //   text1: string;
@@ -31,9 +34,30 @@ const transportData = [
       "Safety on almost any terrain: the Amarok is the only pickup in its class to come with an Automatic Post-Collision Braking System, 17-inch disc brakes at the front and 16-inch disc brakes at the rear as standard. What’s more, the trailer stabilisation system provides the best possible protection against snaking trailers.",
   },
   {
+    img: teramont,
+    text1:
+      "The Amarok transforms expectations of what a bakkie should be. In addition to the countless benchmark features, you've come to expect from the Amarok, its 3.0 litre V6 TDI engine delivers a brutish 165kW and 550Nm of torque. The Amarok V6 has exactly what it takes to get the job done, and then some...",
+    text2:
+      "Safety on almost any terrain: the Amarok is the only pickup in its class to come with an Automatic Post-Collision Braking System, 17-inch disc brakes at the front and 16-inch disc brakes at the rear as standard. What’s more, the trailer stabilisation system provides the best possible protection against snaking trailers.",
+  },
+  {
     img: toyota,
     text1:
       "Toyota transforms expectations of what a bakkie should be. In addition to the countless benchmark features, you've come to expect from the Amarok, its 3.0 litre V6 TDI engine delivers a brutish 165kW and 550Nm of torque. The Amarok V6 has exactly what it takes to get the job done, and then some...",
+    text2:
+      "Safety on almost any terrain: the Amarok is the only pickup in its class to come with an Automatic Post-Collision Braking System, 17-inch disc brakes at the front and 16-inch disc brakes at the rear as standard. What’s more, the trailer stabilisation system provides the best possible protection against snaking trailers.",
+  },
+  {
+    img: bus,
+    text1:
+      "Toyota transforms expectations of what a bakkie should be. In addition to the countless benchmark features, you've come to expect from the Amarok, its 3.0 litre V6 TDI engine delivers a brutish 165kW and 550Nm of torque. The Amarok V6 has exactly what it takes to get the job done, and then some...",
+    text2:
+      "Safety on almost any terrain: the Amarok is the only pickup in its class to come with an Automatic Post-Collision Braking System, 17-inch disc brakes at the front and 16-inch disc brakes at the rear as standard. What’s more, the trailer stabilisation system provides the best possible protection against snaking trailers.",
+  },
+  {
+    img: passat,
+    text1:
+      "The Amarok transforms expectations of what a bakkie should be. In addition to the countless benchmark features, you've come to expect from the Amarok, its 3.0 litre V6 TDI engine delivers a brutish 165kW and 550Nm of torque. The Amarok V6 has exactly what it takes to get the job done, and then some...",
     text2:
       "Safety on almost any terrain: the Amarok is the only pickup in its class to come with an Automatic Post-Collision Braking System, 17-inch disc brakes at the front and 16-inch disc brakes at the rear as standard. What’s more, the trailer stabilisation system provides the best possible protection against snaking trailers.",
   },
@@ -43,22 +67,22 @@ const transportData = [
       "Taxi transforms expectations of what a bakkie should be. In addition to the countless benchmark features, you've come to expect from the Amarok, its 3.0 litre V6 TDI engine delivers a brutish 165kW and 550Nm of torque. The Amarok V6 has exactly what it takes to get the job done, and then some...",
     text2:
       "Safety on almost any terrain: the Amarok is the only pickup in its class to come with an Automatic Post-Collision Braking System, 17-inch disc brakes at the front and 16-inch disc brakes at the rear as standard. What’s more, the trailer stabilisation system provides the best possible protection against snaking trailers.",
-  }
+  },
 ];
 const Transport = () => {
   return (
     <div>
-      <div className="flex flex-col my-6 mx-2">
+      <div className="flex flex-col mt-4 mb-6 mx-2">
         {transportData.map((data, index) => (
           <div
             key={index}
-            className="py-14 flex-col sm:flex sm:flex-row sm:justify-between sm:items-center"
+            className="py-14 flex-col  sm:flex sm:flex-row sm:justify-between sm:items-center"
           >
             <div className="flex-[33%]">{data.text1}</div>
             <img
               src={data.img}
               alt="car"
-              className="flex-[33%] w-60 sm:w-46 object-contain px-2"
+              className="flex-[33%] w-60 sm:w-46 object-contain px-2 "
             />
             <div className="flex-[33%]">{data.text2}</div>
           </div>

@@ -3,9 +3,17 @@ import Footer from "../components/Footer";
 import air1 from "../assets/rwandair.jpg";
 import air2 from '../assets/rwandair1.jpg'
 import air3 from "../assets/rwandair2.jpg";
+import map from "../assets/Map.jpg";
 
 const Airplanes = () => {
     const transportData = [
+      {
+        img: map,
+        text1:
+          "The moment you set eyes on Polo, you’ll see that every inch has been carefully considered to bring you a vehicle with charisma at every curve. From front to back, Polo features a masculine arrow-shaped tornado line. This structures the car’s side profile, , grey office rug to Hollywood’s red carpet.",
+        text2:
+          "Would you prefer just to see the speed and mileage display when you’re driving? Or maybe you’d like other journey-related data? Or the map of your route? Or the title of the track you’re listening to right now? you can configure the high-resolution display yourself. So that it’s exactly the way you want it. ",
+      },
       {
         img: air1,
         text1:
@@ -26,7 +34,7 @@ const Airplanes = () => {
           "The Amarok transforms expectations of what a bakkie should be. In addition to the countless benchmark features, you've come to expect from the Amarok, its 3.0 litre V6 TDI engine delivers a brutish 165kW and 550Nm of torque. The Amarok V6 has exactly what it takes to get the job done, and then some...",
         text2:
           "Safety on almost any terrain: the Amarok is the only pickup in its class to come with an Automatic Post-Collision Braking System, 17-inch disc brakes at the front and 16-inch disc brakes at the rear as standard. What’s more, the trailer stabilisation system provides the best possible protection against snaking trailers.",
-      }
+      },
     ];
   return (
     <div>

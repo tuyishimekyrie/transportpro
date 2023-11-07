@@ -12,16 +12,16 @@ import tap from "../assets/Tap_&_Go_Machine.jpg";
 const Slider = () => {
     return (
       <div>
-        <Marquee className="" pauseOnHover speed={120}>
-          <img src={plane} alt="road" className="w-60 h-60 object-cover px-2 " />
-          <img src={Road1} alt="road" className="w-60 h-60 object-cover px-2" />
-          <img src={Road2} alt="road" className="w-60 h-60 object-cover px-2" />
-          <img src={Road4} alt="road" className="w-60 h-60 object-cover px-2" />
-          <img src={Road5} alt="road" className="w-60 h-60 object-cover px-2" />
-          <img src={Road6} alt="road" className="w-60 h-60 object-cover px-2" />
-          <img src={Road7} alt="road" className="w-60 h-60 object-cover px-2" />
-          <img src={tap} alt="road" className="w-60 h-60 object-cover px-2" />
-          <img src={water} alt="road" className="w-60 h-60 object-cover px-2" />
+        <Marquee className=""   speed={100}>
+          <img src={plane} alt="road" className="w-60 h-64 object-cover px-3 rounded-[1.85rem]" />
+          <img src={Road1} alt="road" className="w-60 h-64 object-cover px-3 rounded-[1.85rem]" />
+          <img src={Road2} alt="road" className="w-60 h-64 object-cover px-3 rounded-[1.85rem]" />
+          <img src={Road4} alt="road" className="w-60 h-64 object-cover px-3 rounded-[1.85rem]" />
+          <img src={Road5} alt="road" className="w-60 h-64 object-cover px-3 rounded-[1.85rem]" />
+          <img src={Road6} alt="road" className="w-60 h-64 object-cover px-3 rounded-[1.85rem]" />
+          <img src={Road7} alt="road" className="w-60 h-64 object-cover px-3 rounded-[1.85rem]" />
+          <img src={tap} alt="road" className="w-60 h-64 object-cover px-3 rounded-[1.85rem]" />
+          <img src={water} alt="road" className="w-60 h-64 object-cover px-3 rounded-[1.85rem]" />
         </Marquee>
       </div>
     );
