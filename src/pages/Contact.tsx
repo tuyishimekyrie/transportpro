@@ -5,8 +5,22 @@ import {
   MapPinIcon,
   PhoneArrowDownLeftIcon,
 } from "@heroicons/react/24/outline";
-
+import { useForm } from "react-hook-form";
+import { useState } from "react";
+interface Props {
+  id: number;
+  email: string;
+  message: string;
+}
 const Contact = () => {
+  const [contactMessage, setContactMessage] = useState<Props[]>([]);
+  const { register, handleSubmit, reset } = useForm<Props>();
+  const onSubmit = (data: Props) => {
+    console.log(data);
+    setContactMessage([...contactMessage, {...data,id: contactMessage.length + 1}])
+    reset();
+  }
+  console.log(contactMessage);
   return (
     <div>
       <Header />
@@ -29,19 +43,21 @@ const Contact = () => {
           <h2 className="text-2xl font-bold border-b-2 border-slate-400 my-3">
             Contact Us
           </h2>
-          <input
-            type="text"
-            placeholder="Type Email Here."
-            className="border-none bg-slate-300 rounded-sm text-black outline-none my-2 p-2 placeholder:text-black"
-          />
-          <input
-            type="text"
-            placeholder="Type Message Here."
-            className="border-none bg-slate-300 rounded-sm text-black outline-none my-2 p-2 placeholder:text-black"
-          />
-          <button className="my-2 bg-sky-600 py-3 px-6 rounded-full text-white hover:bg-sky-700 cursor-pointer">
-            Submit
-          </button>
+          <form className="flex flex-col gap-2" onSubmit={handleSubmit(onSubmit)}>
+            <input
+              type="text"
+              placeholder="Type Email Here."
+              className="border-none bg-slate-300 rounded-sm text-black outline-none my-2 p-2 placeholder:text-black" {...register('email')}
+            />
+            <input
+              type="text"
+              placeholder="Type Message Here."
+              className="border-none bg-slate-300 rounded-sm text-black outline-none my-2 p-2 placeholder:text-black" {...register('message')}
+            />
+            <button className="my-2 bg-sky-600 py-3 px-6 rounded-full text-white hover:bg-sky-700 cursor-pointer">
+              Submit
+            </button>
+          </form>
         </div>
       </div>
       <Footer />
