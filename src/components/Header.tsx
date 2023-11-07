@@ -8,8 +8,8 @@ const Header = () => {
       <div className="logo">
         <img src={logo} alt="logo" className="w-10 rounded-lg" />
       </div>
-      <ul className="flex items-center gap-3">
-        <li className="text-xl hover:text-sky-500">
+      <ul className="flex flex-wrap items-center gap-3">
+        <li className="text-xs sm:text-xl hover:text-sky-500">
           <NavLink
             to="/HomePage"
             className={({ isActive }) =>
@@ -19,7 +19,7 @@ const Header = () => {
             Home
           </NavLink>
         </li>{" "}
-        <li className="text-xl hover:text-sky-500">
+        <li className="text-xs sm:text-xl hover:text-sky-500">
           <NavLink
             to="/About"
             className={({ isActive }) =>
@@ -29,7 +29,7 @@ const Header = () => {
             About
           </NavLink>
         </li>
-        <li className="text-xl hover:text-sky-500">
+        <li className="text-xs sm:text-xl hover:text-sky-500">
           <NavLink
             to="/Services"
             className={({ isActive }) =>
@@ -39,7 +39,7 @@ const Header = () => {
             Services
           </NavLink>
         </li>
-        <li className="text-xl hover:text-sky-500 ">
+        <li className="text-xs sm:text-xl hover:text-sky-500 ">
           <NavLink
             to="/cars"
             className={({ isActive }) =>
@@ -49,7 +49,7 @@ const Header = () => {
             Cars
           </NavLink>
         </li>
-        <li className="text-xl hover:text-sky-500 ">
+        <li className="text-xs sm:text-xl hover:text-sky-500 ">
           <NavLink
             to="/Airplanes"
             className={({ isActive }) =>
@@ -59,7 +59,7 @@ const Header = () => {
             Airplanes
           </NavLink>
         </li>
-        <li className="text-xl hover:text-sky-500 ">
+        <li className="text-xs sm:text-xl hover:text-sky-500 ">
           <NavLink
             to="/Boats"
             className={({ isActive }) =>
@@ -69,7 +69,7 @@ const Header = () => {
             Boats
           </NavLink>
         </li>
-        <li className="text-xl hover:text-sky-500 ">
+        <li className="text-xs sm:text-xl hover:text-sky-500 ">
           <NavLink
             to="/Contact"
             className={({ isActive }) =>
