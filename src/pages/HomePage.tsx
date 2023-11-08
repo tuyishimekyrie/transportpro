@@ -10,8 +10,10 @@ const App = () => {
     <div className="">
       <Header />
       <Hero />
-      <Slider  />
-      <h1 className="font-bold text-center py-4 text-xl ">Services</h1>
+      <Slider />
+      <h1 className="font-bold text-center py-4 text-2xl sm:text-3xl underline">
+        Services
+      </h1>
       <Transport />
       <Footer />
     </div>

@@ -32,7 +32,9 @@ const Boats = () => {
     <div>
       <Header />
       <div>
-        <h1 className="font-bold text-center py-4 text-2xl  ">Services</h1>
+        <h1 className="font-bold text-center py-4 text-2xl sm:text-3xl underline  ">
+          Boats Services
+        </h1>
         <div className="flex flex-col my-6 mx-2">
           {transportData.map((data, index) => (
             <div

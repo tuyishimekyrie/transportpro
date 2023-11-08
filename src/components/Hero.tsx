@@ -6,8 +6,11 @@ import Road4 from "../assets/toyoya.jpg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-interface Inputs {
-  id: number;
+// import { v4 as uuidv4 } from "uuid";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../firebase-basics/firebase";
+export interface Inputs {
+  id: string;
   names: string;
   email: string;
   location: string;
@@ -18,13 +21,25 @@ interface Inputs {
 const Hero = () => {
   const [show, setShow] = useState(false);
   const [dataForm, setDataForm] = useState<Inputs[]>([]);
-  const { register, handleSubmit,reset } = useForm<Inputs>();
+  const { register, handleSubmit, reset } = useForm<Inputs>();
+  const colRef = collection(db, "orders");
   const onSubmit: SubmitHandler<Inputs> = (data: Inputs) => {
-   
-    setDataForm([...dataForm, { ...data,id: dataForm.length + 1  }]);
-    reset()
-  }
-  console.log(dataForm)
+    setDataForm([...dataForm, {  ...data  }]);
+    addDoc(colRef, {
+      // id: data.id,
+      names: data.names,
+      email: data.email,
+      location: data.location,
+      service: data.service,
+      destination: data.destination,
+      times: data.times,
+    }).then(() => {
+      console.log(data);
+    });
+    reset();
+    console.log(data)
+  };
+  // console.log(dataForm)
   return (
     <div className="relative p-4 flex-col sm:flex sm:flex-row sm:justify-items-center  sm:my-6">
       <div className=" pb-6 sm:py-10 max-w-[65%]">
@@ -87,7 +102,7 @@ const Hero = () => {
                   Service
                 </label>
                 <select
-                  id="option"
+                  id="service"
                   className="bg-transparent border-2 border-slate-300 "
                   {...register("service")}
                 >
@@ -102,7 +117,7 @@ const Hero = () => {
                 <label htmlFor="time">Time</label>
                 <input
                   type="datetime-local"
-                  id="time"
+                  id="times"
                   className="py-2 rounded-md outline-none bg-transparent border-2 border-slate-300"
                   {...register("times")}
                 />
@@ -110,7 +125,10 @@ const Hero = () => {
               <button className="py-3 px-6 bg-slate-900 text-white rounded-full mt-4 hover:bg-emerald-950">
                 Submit
               </button>
-              <button className="py-3 px-6 bg-slate-900 text-white rounded-full mt-4 ml-2 hover:bg-teal-950" onClick={() => setShow(!show)}>
+              <button
+                className="py-3 px-6 bg-slate-900 text-white rounded-full mt-4 ml-2 hover:bg-teal-950"
+                onClick={() => setShow(!show)}
+              >
                 Discrard Ticket
               </button>
             </form>
