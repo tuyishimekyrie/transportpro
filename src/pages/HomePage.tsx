@@ -1,13 +1,12 @@
-// import React from 'react'
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Slider from "../components/Slider";
 import Transport from "../components/Transport";
-
+import {motion} from 'framer-motion'
 const App = () => {
   return (
-    <div className="">
+    <motion.div className="">
       <Header />
       <Hero />
       <Slider />
@@ -16,7 +15,7 @@ const App = () => {
       </h1>
       <Transport />
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

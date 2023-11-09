@@ -18,7 +18,7 @@ const Login = () => {
           onClick={handleSign}
           className="my-2 bg-sky-600 py-3 px-8 rounded-full text-white hover:bg-sky-700 cursor-pointer"
         >
-          Login
+          Login as Admin
         </button>
       </div>
       <Footer />

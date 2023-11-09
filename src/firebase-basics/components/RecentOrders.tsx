@@ -20,7 +20,7 @@ const RecentOrders = () => {
       });
     });
     return () => controller.abort()
-  }, []);
+  }, [colRef]);
   // useEffect(() => {
   //   const controller = new AbortController();
   //   const unsubscribe = onSnapshot(colRef, (snapshot) => {

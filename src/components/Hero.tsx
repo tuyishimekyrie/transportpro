@@ -9,6 +9,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 // import { v4 as uuidv4 } from "uuid";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase-basics/firebase";
+import { motion } from "framer-motion";
 export interface Inputs {
   id: string;
   names: string;
@@ -42,20 +43,25 @@ const Hero = () => {
   // console.log(dataForm)
   return (
     <div className="relative p-4 flex-col sm:flex sm:flex-row sm:justify-items-center  sm:my-6">
-      <div className=" pb-6 sm:py-10 max-w-[65%]">
-        <p className="py-5 sm:text-xl items-start">
+      <motion.div
+        className=" pb-6 sm:py-10 max-w-[65%]"
+        initial={{ x: -1000 }}
+        animate={{ x: 10 }}
+        transition={{ ease: "easeOut", duration: 1.25 }}
+      >
+        <p className="py-5 text-xs sm:text-xl items-start">
           We offer a wide range of transportation services to help you get
           around our beautiful country. Whether you're looking for a scenic
           train ride, a comfortable bus ride, or a convenient airport transfer,
           we have you covered.
         </p>
         <button
-          className="px-4 py-3 bg-slate-900 text-white rounded-full hover:bg-sky-500"
+          className="px-4 py-3 bg-slate-900 text-white rounded-full hover:bg-sky-500 text-xs sm:text-lg"
           onClick={() => setShow(!show)}
         >
           <Link to="/">Book your Ticket</Link>
         </button>
-      </div>
+      </motion.div>
       {show ? (
         <>
           {" "}
@@ -138,7 +144,12 @@ const Hero = () => {
         ""
       )}
 
-      <div className="  flex flex-wrap gap-2  ">
+      <motion.div
+        className="  flex flex-wrap gap-2  "
+        initial={{ x: 1000 }}
+        animate={{ x: 10 }}
+        transition={{ ease: "easeOut", duration: 1.25 }}
+      >
         <img
           src={Road2}
           alt="road"
@@ -160,8 +171,8 @@ const Hero = () => {
           alt="road"
           className="object-cover z-1 w-40 h-40  rounded-md"
         />
+    </motion.div>
       </div>
-    </div>
   );
 };
 

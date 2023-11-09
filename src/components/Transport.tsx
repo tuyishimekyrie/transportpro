@@ -6,6 +6,7 @@ import bus from "../assets/Bus.jpg";
 import taxi from "../assets/taxi.png";
 import teramont from "../assets/teramont.png";
 import passat from "../assets/Passat_1.png";
+import { motion } from "framer-motion";
 // type prop = {
 //   img: string;
 //   text1: string;
@@ -71,12 +72,16 @@ const transportData = [
 ];
 const Transport = () => {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ ease: "easeOut", duration: 1.5 }}
+    >
       <div className="flex flex-col mt-4 mb-6 mx-2">
         {transportData.map((data, index) => (
           <div
             key={index}
-            className="py-14 flex-col  sm:flex sm:flex-row sm:justify-between sm:items-center"
+            className="py-14 flex-col  sm:flex sm:flex-row sm:justify-between sm:items-center text-xs sm:text-lg"
           >
             <div className="flex-[33%]">{data.text1}</div>
             <img
@@ -84,11 +89,11 @@ const Transport = () => {
               alt="car"
               className="flex-[33%] w-60 sm:w-46 object-contain px-2 "
             />
-            <div className="flex-[33%]">{data.text2}</div>
+            <div className="flex-[33%] text-xs sm:text-lg">{data.text2}</div>
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

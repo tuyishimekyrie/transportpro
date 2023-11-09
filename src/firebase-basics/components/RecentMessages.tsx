@@ -18,7 +18,7 @@ const RecentOrders = () => {
       });
     });
     return () => controller.abort();
-  }, []);
+  }, [colRef]);
   // useEffect(() => {
   //   const controller = new AbortController();
   //   const unsubscribe = onSnapshot(colRef, (snapshot) => {
@@ -39,7 +39,7 @@ const RecentOrders = () => {
 
  return (
    <div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
-     <h1> Orders</h1>
+     <h1> Messages</h1>
      <ul>
        {orders.map((order, index) => (
          <li

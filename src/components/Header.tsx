@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.jpg";
+import { motion } from "framer-motion";
 
 // import { useEffect, useState } from "react";
 // interface Props {
@@ -44,12 +45,17 @@ const Header = () => {
   //    };
   //  }, []);
   return (
-    <div className="px-4 py-2 flex-col   sm:flex sm:flex-row sm:justify-between  border-b-2 border-slate-300 ">
+    <motion.div
+      className="px-4 py-2 flex-col flex-wrap   sm:flex sm:flex-row sm:justify-between  border-b-2 border-slate-300 "
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ ease: "easeOut", duration: 1 }}
+    >
       <div className="logo">
         <img src={logo} alt="logo" className="w-10 rounded-lg" />
       </div>
-      <ul className="flex flex-wrap items-center gap-3">
-        <li className="text-xs sm:text-xl hover:text-sky-500">
+      <ul className="flex flex-wrap sm:flex-wrap items-center gap-3">
+        <li className="text-xs sm:text-lg hover:text-sky-500">
           <NavLink
             to="/HomePage"
             className={({ isActive }) =>
@@ -59,7 +65,7 @@ const Header = () => {
             Home
           </NavLink>
         </li>{" "}
-        <li className="text-xs sm:text-xl hover:text-sky-500">
+        <li className="text-xs sm:text-lg hover:text-sky-500">
           <NavLink
             to="/About"
             className={({ isActive }) =>
@@ -69,7 +75,7 @@ const Header = () => {
             About
           </NavLink>
         </li>
-        <li className="text-xs sm:text-xl hover:text-sky-500">
+        <li className="text-xs sm:text-lg hover:text-sky-500">
           <NavLink
             to="/Services"
             className={({ isActive }) =>
@@ -79,7 +85,7 @@ const Header = () => {
             Services
           </NavLink>
         </li>
-        <li className="text-xs sm:text-xl hover:text-sky-500 ">
+        <li className="text-xs sm:text-lg hover:text-sky-500 ">
           <NavLink
             to="/cars"
             className={({ isActive }) =>
@@ -89,7 +95,7 @@ const Header = () => {
             Cars
           </NavLink>
         </li>
-        <li className="text-xs sm:text-xl hover:text-sky-500 ">
+        <li className="text-xs sm:text-lg hover:text-sky-500 ">
           <NavLink
             to="/Airplanes"
             className={({ isActive }) =>
@@ -99,7 +105,7 @@ const Header = () => {
             Airplanes
           </NavLink>
         </li>
-        <li className="text-xs sm:text-xl hover:text-sky-500 ">
+        <li className="text-xs sm:text-lg hover:text-sky-500 ">
           <NavLink
             to="/Boats"
             className={({ isActive }) =>
@@ -109,7 +115,7 @@ const Header = () => {
             Boats
           </NavLink>
         </li>
-        <li className="text-xs sm:text-xl hover:text-sky-500 ">
+        <li className="text-xs sm:text-lg hover:text-sky-500 ">
           <NavLink
             to="/Contact"
             className={({ isActive }) =>
@@ -119,7 +125,7 @@ const Header = () => {
             Contact US
           </NavLink>
         </li>
-        <li className="text-xs sm:text-xl hover:text-sky-500 ">
+        <li className="text-xs sm:text-lg hover:text-sky-500 ">
           <NavLink
             to="/Login"
             className={({ isActive }) =>
@@ -127,11 +133,11 @@ const Header = () => {
             }
           >
             {" "}
-             Admin
+            Admin
           </NavLink>
         </li>
       </ul>
-    </div>
+    </motion.div>
   );
 };
 
