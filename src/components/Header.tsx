@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.jpg";
-import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+
 // import { useEffect, useState } from "react";
 // interface Props {
 //   displayName: string | null;
@@ -10,34 +10,31 @@ import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 
 const Header = () => {
   // const [users, setUsers] = useState<Props[]>([]);
-  const auth = getAuth();
-  const provider = new GoogleAuthProvider();
-  const handleSign = () => {
-    signInWithPopup(auth, provider)
-      // .then((result) => {
-      // This gives you a Google Access Token. You can use it to access the Google API.
-      //  const credential = GoogleAuthProvider.credentialFromResult(result);
-      //  const token = credential.accessToken;
-      // The signed-in user info.
-      // const user: = result.user;
-      // setUsers(user);
-      // console.log(user);
-      // console.log( users);
-      // ...
-    // });
-    //  .catch((error) => {
-    // Handle Errors here.
-    //  const errorCode = error.code;
-    //  const errorMessage = error.message;
-    // The email of the user's account used.
-    // const email = error.customData.email;
-    // The AuthCredential type that was used.
-    //  const credential = GoogleAuthProvider.credentialFromError(error);
-    //  console.log(errorCode, errorMessage);
-    // ...
-    //  });
-    // console.log('clicked')
-  };
+
+  // .then((result) => {
+  // This gives you a Google Access Token. You can use it to access the Google API.
+  //  const credential = GoogleAuthProvider.credentialFromResult(result);
+  //  const token = credential.accessToken;
+  // The signed-in user info.
+  // const user: = result.user;
+  // setUsers(user);
+  // console.log(user);
+  // console.log( users);
+  // ...
+  // });
+  //  .catch((error) => {
+  // Handle Errors here.
+  //  const errorCode = error.code;
+  //  const errorMessage = error.message;
+  // The email of the user's account used.
+  // const email = error.customData.email;
+  // The AuthCredential type that was used.
+  //  const credential = GoogleAuthProvider.credentialFromError(error);
+  //  console.log(errorCode, errorMessage);
+  // ...
+  //  });
+  // console.log('clicked')
+  // };
   //  useEffect(() => {
   //    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
   //      setUsers(currentUser);
@@ -122,12 +119,17 @@ const Header = () => {
             Contact US
           </NavLink>
         </li>
-        <button
-          className="text-xs sm:text-xl hover:text-sky-500 "
-          onClick={handleSign}
-        >
-          Login
-        </button>
+        <li className="text-xs sm:text-xl hover:text-sky-500 ">
+          <NavLink
+            to="/Login"
+            className={({ isActive }) =>
+              isActive ? "text-sky-500 font-bold border-b-2 border-sky-400" : ""
+            }
+          >
+            {" "}
+             Admin
+          </NavLink>
+        </li>
       </ul>
     </div>
   );

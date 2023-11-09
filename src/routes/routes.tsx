@@ -8,6 +8,7 @@ import Boats from "../pages/Boats";
 import Contact from "../pages/Contact";
 import ErrorPage from "../pages/ErrorPage";
 import Layout from "../firebase-basics/Layout";
+import Login from "../components/Login";
 
 const router = createBrowserRouter([
   { path: "/", element: <HomePage />, errorElement: <ErrorPage /> },
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
   { path: "/Boats", element: <Boats /> },
   { path: "/Contact", element: <Contact /> },
   { path: "/Dashboard", element: <Layout /> },
+  { path: "/Login", element: <Login /> },
 ]);
 
 export default router;

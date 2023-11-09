@@ -7,17 +7,27 @@ import {
 } from "@heroicons/react/24/outline";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-interface Props {
-  id: number;
+import { db } from "../firebase-basics/firebase";
+import { addDoc, collection } from "firebase/firestore";
+export interface Props {
+  // id: number;
   email: string;
   message: string;
 }
 const Contact = () => {
   const [contactMessage, setContactMessage] = useState<Props[]>([]);
   const { register, handleSubmit, reset } = useForm<Props>();
+  const colRef = collection(db, "messaging");
   const onSubmit = (data: Props) => {
     console.log(data);
-    setContactMessage([...contactMessage, {...data,id: contactMessage.length + 1}])
+    setContactMessage([...contactMessage, { ...data}])
+    addDoc(colRef, {
+      // id: data.id,
+      email: data.email,
+      message: data.message,
+    }).then(() => {
+      console.log(data);
+    });
     reset();
   }
   console.log(contactMessage);
