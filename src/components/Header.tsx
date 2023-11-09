@@ -46,10 +46,10 @@ const Header = () => {
   //  }, []);
   return (
     <motion.div
-      className="px-4 py-2 flex-col flex-wrap   sm:flex sm:flex-row sm:justify-between  border-b-2 border-slate-300 "
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ ease: "easeOut", duration: 1 }}
+      className="overflow-hidden px-4 py-2 flex-col flex-wrap   sm:flex sm:flex-row sm:justify-between  border-b-2 border-slate-300 "
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // transition={{ ease: "easeOut", duration: 1 }}
     >
       <div className="logo">
         <img src={logo} alt="logo" className="w-10 rounded-lg" />

@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div>
       <Header />
-      <div className="m-4">
+      <div className="m-4 my-10">
         <h1 className="text-2xl font-bold py-2">Mission</h1>
         <h2 className="text-xl font-bold py-2">The main mission of Company shall be as follows:</h2>
         <p>

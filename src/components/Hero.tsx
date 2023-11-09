@@ -25,7 +25,7 @@ const Hero = () => {
   const { register, handleSubmit, reset } = useForm<Inputs>();
   const colRef = collection(db, "orders");
   const onSubmit: SubmitHandler<Inputs> = (data: Inputs) => {
-    setDataForm([...dataForm, {  ...data  }]);
+    setDataForm([...dataForm, { ...data }]);
     addDoc(colRef, {
       // id: data.id,
       names: data.names,
@@ -38,16 +38,16 @@ const Hero = () => {
       console.log(data);
     });
     reset();
-    console.log(data)
+    console.log(data);
   };
   // console.log(dataForm)
   return (
-    <div className="relative p-4 flex-col sm:flex sm:flex-row sm:justify-items-center  sm:my-6">
+    <div className=" relative p-4 flex-col sm:flex sm:flex-row sm:justify-items-center  sm:my-6">
       <motion.div
-        className=" pb-6 sm:py-10 max-w-[65%]"
-        initial={{ x: -1000 }}
-        animate={{ x: 10 }}
-        transition={{ ease: "easeOut", duration: 1.25 }}
+        className=" pb-6 sm:py-10 max-w-[65%] "
+        // initial={{ x: -100 }}
+        // animate={{ x: 10 }}
+        // transition={{ ease: "easeOut", duration: 1.25 }}
       >
         <p className="py-5 text-xs sm:text-xl items-start">
           We offer a wide range of transportation services to help you get
@@ -60,6 +60,12 @@ const Hero = () => {
           onClick={() => setShow(!show)}
         >
           <Link to="/">Book your Ticket</Link>
+        </button>
+        <button
+          className="mt-4  px-4 py-3 ml-0 bg-slate-900 text-white rounded-full hover:bg-sky-500 text-xs sm:text-lg sm:mt-0 sm:ml-4"
+         
+        >
+          <a href="https://www.mininfra.gov.rw/digital-transformation-1-2" target="_blank">Read More</a>
         </button>
       </motion.div>
       {show ? (
@@ -145,34 +151,37 @@ const Hero = () => {
       )}
 
       <motion.div
-        className="  flex flex-wrap gap-2  "
-        initial={{ x: 1000 }}
-        animate={{ x: 10 }}
-        transition={{ ease: "easeOut", duration: 1.25 }}
+        className="  flex flex-wrap gap-3  "
+        // initial={{ x: 100 }}
+        // animate={{ x: 10 }}
+        // transition={{ ease: "easeOut", duration: 1.25 }}
       >
-        <img
-          src={Road2}
-          alt="road"
-          className="object-cover z-1 w-40 h-40  rounded-md"
-        />
-        <img
-          src={Road1}
-          alt="road"
-          className="object-cover z-1  w-40 h-40  rounded-md"
-        />
-
-        <img
-          src={Road3}
-          alt="road"
-          className="object-cover z-1 w-40 h-40  rounded-md"
-        />
-        <img
-          src={Road4}
-          alt="road"
-          className="object-cover z-1 w-40 h-40  rounded-md"
-        />
-    </motion.div>
-      </div>
+        <div>
+          <img
+            src={Road2}
+            alt="road"
+            className="object-cover z-1 w-24 h-28 sm:w-40 sm:h-40  rounded-md"
+          />
+          <img
+            src={Road1}
+            alt="road"
+            className="object-cover z-1 w-24 h-28 sm:w-40 sm:h-40  rounded-md"
+          />
+        </div>
+        <div>
+          <img
+            src={Road3}
+            alt="road"
+            className="object-cover z-1 w-24 h-28 sm:w-40 sm:h-40  rounded-md"
+          />
+          <img
+            src={Road4}
+            alt="road"
+            className="object-cover z-1 w-24 h-28 sm:w-40 sm:h-40  rounded-md"
+          />
+        </div>
+      </motion.div>
+    </div>
   );
 };
 

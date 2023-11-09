@@ -12,7 +12,7 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className="flex gap-4 justify-center my-28 items-center">
+      <div className="flex gap-4 justify-center my-36 items-center">
         <img src={img} alt="login" className="w-96" />
         <button
           onClick={handleSign}

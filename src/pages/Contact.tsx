@@ -34,7 +34,7 @@ const Contact = () => {
   return (
     <div>
       <Header />
-      <div className="py-4 px-2 my-8">
+      <div className=" px-2 my-20">
         <div className="flex flex-col items-center gap-2 my-3">
           <p className="flex gap-2">
             <EnvelopeIcon className="w-6" />

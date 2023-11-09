@@ -7,7 +7,7 @@ const Services = () => {
   return (
     <div>
       <Header />
-      <div className="flex-col sm:flex sm:flex-row justify-between mx-2 my-8">
+      <div className="flex-col sm:flex sm:flex-row justify-between mx-2 my-32">
         <div className="m-4 mb-10 sm:mb-40">
           <p className="text-xl py-2 ">
             <span className="text-sky-800">Public Transport </span>Rwanda
@@ -20,6 +20,9 @@ const Services = () => {
           </p>
           <p className="text-xl py-2 ">
             <span className="text-sky-800">Toyota </span>Rwanda
+          </p>
+          <p className="text-xl py-2 ">
+            <span className="text-sky-800">CarBaba </span>Rwanda
           </p>
           <p className="text-xl py-2 ">
             <span className="text-sky-800">CarBaba </span>Rwanda

@@ -93,6 +93,15 @@ const Transport = () => {
           </div>
         ))}
       </div>
+      <div className="max-w-[10rem] ml-20 text-xs sm:text-lg sm:max-w-[14rem] px-6 py-3 sm:ml-[35rem] bg-slate-900 text-white rounded-full my-4  hover:bg-teal-950 items-center hover:cursor-pointer">
+        {" "}
+        <a
+          href="https://www.mininfra.gov.rw/digital-transformation-1-2"
+          target="_blank"
+        >
+          More Information
+        </a>
+      </div>
     </motion.div>
   );
 };

@@ -11,7 +11,7 @@ const RecentOrders = () => {
   const colRef = collection(db, "orders");
   useEffect(() => {
     const controller = new AbortController()
-  const cachedOrder: Inputs[] = [];
+    const cachedOrder: Inputs[] = [];
     onSnapshot(colRef, (snapshot) => {
       snapshot.docs.forEach((doc: DocumentData) => {
         cachedOrder.push({ ...doc.data() });
@@ -42,6 +42,7 @@ const RecentOrders = () => {
   return (
     <div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
       <h1> Orders</h1>
+       
       <ul>
         {order.map((order, index) => (
           <li

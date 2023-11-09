@@ -41,7 +41,7 @@ const Airplanes = () => {
       <Header />
       <div>
         <h1 className="font-bold text-center py-4 text-2xl sm:text-3xl underline ">Airline Services</h1>
-        <div className="flex flex-col my-6 mx-2">
+        <div className="flex  flex-col my-6 mx-2">
           {transportData.map((data, index) => (
             <div
               key={index}
