@@ -1,7 +1,6 @@
 
 # Transport Pro
 
-![Project Logo](./src/assets/logo.jpg) 
 
 [![React](https://img.shields.io/badge/React-17.0.2-blue)](https://reactjs.org/)
 [![Firebase](https://img.shields.io/badge/Firebase-9.6.1-orange)](https://firebase.google.com/)
