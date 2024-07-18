@@ -7,11 +7,6 @@ import taxi from "../assets/taxi.png";
 import teramont from "../assets/teramont.png";
 import passat from "../assets/Passat_1.png";
 import { motion } from "framer-motion";
-// type prop = {
-//   img: string;
-//   text1: string;
-//   text2: string;
-// };
 const transportData = [
   {
     img: polo,
