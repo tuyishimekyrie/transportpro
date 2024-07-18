@@ -40,7 +40,7 @@ const Hero = () => {
   };
   // console.log(dataForm)
   return (
-    <div className=" relative p-4 flex-col sm:flex sm:flex-row sm:justify-items-center  sm:my-6">
+    <div className=" relative py-4 px-12 flex-col justify-between sm:flex sm:flex-row sm:justify-items-center  sm:my-6">
       <motion.div
         className=" pb-6 sm:py-10 max-w-[65%] "
       >
