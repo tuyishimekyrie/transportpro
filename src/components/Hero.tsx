@@ -38,7 +38,6 @@ const Hero = () => {
     reset();
     console.log(data);
   };
-  // console.log(dataForm)
   return (
     <div className=" relative py-4 px-12 flex-col justify-between sm:flex sm:flex-row sm:justify-items-center  sm:my-6">
       <motion.div
