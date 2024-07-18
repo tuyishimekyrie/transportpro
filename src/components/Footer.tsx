@@ -1,4 +1,3 @@
-// import React from 'react'
 import { ChatBubbleLeftEllipsisIcon, EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import logo from '../assets/logo.jpg'
 
