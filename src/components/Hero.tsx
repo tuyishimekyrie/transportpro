@@ -1,4 +1,3 @@
-// import React from 'react'
 import Road1 from "../assets/Road1.jpeg";
 import Road2 from "../assets/taxi.png";
 import Road3 from "../assets/rwandair.jpg";
@@ -6,7 +5,6 @@ import Road4 from "../assets/toyoya.jpg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-// import { v4 as uuidv4 } from "uuid";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase-basics/firebase";
 import { motion } from "framer-motion";
@@ -45,9 +43,6 @@ const Hero = () => {
     <div className=" relative p-4 flex-col sm:flex sm:flex-row sm:justify-items-center  sm:my-6">
       <motion.div
         className=" pb-6 sm:py-10 max-w-[65%] "
-        // initial={{ x: -100 }}
-        // animate={{ x: 10 }}
-        // transition={{ ease: "easeOut", duration: 1.25 }}
       >
         <p className="py-5 text-xs sm:text-xl items-start">
           We offer a wide range of transportation services to help you get
@@ -152,9 +147,6 @@ const Hero = () => {
 
       <motion.div
         className="  flex flex-wrap gap-3  "
-        // initial={{ x: 100 }}
-        // animate={{ x: 10 }}
-        // transition={{ ease: "easeOut", duration: 1.25 }}
       >
         <div>
           <img
