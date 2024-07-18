@@ -37,7 +37,7 @@ Transport Pro is a fullstack web application built with React and Firebase. It s
 ## Screenshots
 
 ### Home Page
-![Home Page](path/to/homepage_screenshot.png)
+![Home Page](image.png)
 
 ### Car Listing
 ![Car Listing](path/to/carlisting_screenshot.png)
