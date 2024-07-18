@@ -1,7 +1,7 @@
 import Header from './Header'
 import Footer from './Footer'
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-import img from '../assets/cloud-computing-modern-flat-concept-for-web-banner-design-man-enters-password-and-login-to-access-cloud-storage-for-uploading-and-processing-files-illustration-with-isolated-people-scene-free-vector.jpg'
+import img from '../assets/Passat_1.png'
 
 const Login = () => {
       const auth = getAuth();
